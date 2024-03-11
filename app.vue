@@ -1,5 +1,7 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <h1 class="text-red-400">
+      Onlygists
+    </h1>
   </div>
 </template>
