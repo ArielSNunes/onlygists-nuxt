@@ -3,31 +3,31 @@ import path from 'path'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {
-    enabled: true
+    enabled: true,
   },
-  modules: [
+  modules: [ // Inicia os módulos de terceiros no app
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
     'nuxt-primevue'
   ],
-  css: [
+  css: [ // Injeta alguns estilos css no app
     'primeicons/primeicons.css'
   ],
-  googleFonts: {
+  googleFonts: { // Configurações do google fonts
     base64: true,
-    fontsDir: 'assets/fonts',
+    fontsDir: 'assets/fonts', // Pasta onde vai baixar as fontes
     overwriting: true,
-    families: {
-      Inter: [300, 500, 800]
+    families: { // Objeto com as famílias de fontes
+      Inter: [300, 500, 800] // Fonte e seus valores para serem adicionados
     }
   },
-  primevue: {
+  primevue: { // Configurações do primevue
     options: {
-      unstyled: true
+      unstyled: true // Remove os estilos
     },
-    importPT: {
+    importPT: { // Objeto para importar o tema
       as: 'lara',
-      from: path.resolve(__dirname, './assets/presets/lara/')
+      from: path.resolve(__dirname, './assets/presets/lara/') // Tema deve ser baixado da documentação
     }
   }
 })
